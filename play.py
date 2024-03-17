@@ -5,7 +5,6 @@ import pygame
 import time
 import random
 
-
 # Param and func for game
 items_choice = ['Rock', 'Paper', 'Scissors']
 counter1 = 0
@@ -17,12 +16,18 @@ def get_choice(src_list):
 
 
 def get_result(item1, item2, counter1, counter2):
-    if item1 =='Rock' and item2 == 'Scissors': counter1 += 1
-    elif item1 =='Scissors' and item2 == 'Rock': counter2 += 1
-    elif item1 =='Paper' and item2 == 'Scissors': counter2 += 1
-    elif item1 =='Scissors' and item2 == 'Paper': counter1 += 1
-    elif item1 =='Rock' and item2 == 'Paper': counter2 += 1
-    elif item1 =='Paper' and item2 == 'Rock': counter1 += 1
+    if item1 == 'Rock' and item2 == 'Scissors':
+        counter1 += 1
+    elif item1 == 'Scissors' and item2 == 'Rock':
+        counter2 += 1
+    elif item1 == 'Paper' and item2 == 'Scissors':
+        counter2 += 1
+    elif item1 == 'Scissors' and item2 == 'Paper':
+        counter1 += 1
+    elif item1 == 'Rock' and item2 == 'Paper':
+        counter2 += 1
+    elif item1 == 'Paper' and item2 == 'Rock':
+        counter1 += 1
     return counter1, counter2
 
 
@@ -77,7 +82,7 @@ while True:
         f"{model.model.names[class_id]}"
         for _, _, _, class_id, _ in detections
     ]
-    print(labels)
+    # print(labels)
     frame = box.annotate(
         scene=frame,
         detections=detections,

@@ -1,8 +1,8 @@
 task: detect
 mode: train
 model: yolov8n.pt
-data: ./datasets/RPS/data.yaml
-epochs: 1
+data: /content/Rock-Paper-Scissors-SXSW-12/data.yaml
+epochs: 10
 time: null
 patience: 100
 batch: 8
